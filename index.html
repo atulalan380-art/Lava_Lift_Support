@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lava Lift: Logic Rescue Support</title>
+  <style>
+    :root {
+      --bg: #0b0a10;
+      --text: #f2f2f6;
+      --muted: #b9b8c7;
+      --accent: #ff6b3d;
+      --border: rgba(255,255,255,0.10);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: radial-gradient(1200px 500px at 50% -100px, rgba(255,107,61,0.22), transparent 60%),
+                  radial-gradient(900px 500px at 20% 0px, rgba(144,75,255,0.20), transparent 55%),
+                  var(--bg);
+      line-height: 1.55;
+    }
+    header {
+      padding: 18px 16px 14px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(11,10,16,0.65);
+      z-index: 10;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 260px;
+    }
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(145deg, rgba(255,107,61,0.9), rgba(255,107,61,0.25));
+      box-shadow: 0 12px 26px rgba(0,0,0,0.45);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 12px;
+      font-size: 14px;
+    }
+    nav a:hover { color: var(--text); }
+    main {
+      padding: 26px 16px 60px;
+    }
+    h1 {
+      margin: 8px 0 8px;
+      font-size: clamp(24px, 3.5vw, 34px);
+    }
+    .hero p {
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 0 14px;
+    }
+    .cta a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 6px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+    }
+    .cta a.primary {
+      border-color: rgba(255,107,61,0.55);
+      background: rgba(255,107,61,0.14);
+      color: #ffd7c9;
+    }
+    section {
+      margin-top: 22px;
+      padding: 18px 16px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+    }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h3 {
+      margin: 14px 0 6px;
+      font-size: 16px;
+    }
+    p, li {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    ul {
+      padding-left: 18px;
+      margin: 8px 0 0;
+    }
+    .small {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .email {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .email:hover { text-decoration: underline; }
+    pre {
+      overflow: auto;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.35);
+      color: #e8e8f0;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 18px 16px 26px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .toplink {
+      float: right;
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body id="top">
+  <header>
+    <div class="wrap top">
+      <div class="brand">
+        <div class="icon">LL</div>
+        <div>
+          <div style="font-weight:700;">Lava Lift Support</div>
+          <div class="small">Lava Lift: Logic Rescue</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+        <a href="#contact">Contact</a>
+        <a href="#privacy">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <h1>Lava Lift: Logic Rescue – Help & Support</h1>
+      <p>
+        Welcome to the official support page for <b>Lava Lift: Logic Rescue</b>, a hyper-casual lava rescue puzzle inspired by classic river-crossing logic challenges.
+        You pilot a hot-air balloon to transport survivors from the <b>Left Bank (Danger)</b> to the <b>Right Bank (Safety)</b> while avoiding incompatible groups and outrunning rising lava.
+      </p>
+      <div class="cta">
+        <a class="primary" href="#faq">View FAQs</a>
+        <a href="#contact">Contact Support</a>
+      </div>
+    </div>
+
+    <section id="about">
+      <a class="toplink" href="#top">Back to top ↑</a>
+      <h2>About Lava Lift: Logic Rescue</h2>
+      <p>A quick overview of what the game does.</p>
+
+      <h3>Rescue + Logic Puzzle</h3>
+      <p>
+        Your mission is to ferry survivors across a lava chasm using a balloon with limited capacity.
+        Each level is a logic puzzle: some characters fight, some eat others, some infect, and some protect.
+        The correct solution is the safest crossing sequence.
+      </p>
+
+      <h3>Rising Lava (Timer)</h3>
+      <p>
+        The lava rises continuously. If it reaches the ledge height, it's game over.
+        Higher levels introduce hazards like wind gusts, falling rocks, geysers, and flying enemies.
+      </p>
+
+      <h3>Fast Touch Controls</h3>
+      <p>
+        Tap to load/unload characters. Swipe/hold to fly left and right. The game is designed for quick, readable decisions with instant feedback.
+      </p>
+
+      <p class="small">Note: Some features may vary depending on the platform and version of the app.</p>
+    </section>
+
+    <section id="faq">
+      <a class="toplink" href="#top">Back to top ↑</a>
+      <h2>Frequently Asked Questions</h2>
+      <p>Quick answers to the most common questions.</p>
+
+      <h3>How do I start a level?</h3>
+      <p>
+        Tap survivors on the current bank to load them into the balloon (within capacity), then swipe to fly to the other side.
+        Tap survivors in the basket to unload them.
+      </p>
+
+      <h3>Why did I fail even though the balloon landed safely?</h3>
+      <p>
+        The game fails if an invalid group is left alone on either bank (for example: Wolf + Sheep with no protector),
+        or if lava reaches the cliff ledge height. Most logic fails happen when you fly away from a bank.
+      </p>
+
+      <h3>Will I lose progress if I reinstall?</h3>
+      <p>
+        This depends on your platform and whether cloud backup/sync is enabled. If you are unsure, contact support with your device details.
+      </p>
+
+      <h3>The game feels too hard. Any tips?</h3>
+      <p>
+        Try planning one move ahead. Your goal is to keep both banks in a valid state after every crossing.
+        If your build includes hints/rewind, use them to recover from mis-taps.
+      </p>
+    </section>
+
+    <section id="troubleshooting">
+      <a class="toplink" href="#top">Back to top ↑</a>
+      <h2>Troubleshooting</h2>
+      <p>Before contacting support, try these quick checks.</p>
+
+      <h3>App Not Opening or Crashing</h3>
+      <ul>
+        <li>Restart your device and try again.</li>
+        <li>Ensure you are on the latest OS version supported by your device.</li>
+        <li>Update Lava Lift: Logic Rescue to the latest version from your app store.</li>
+        <li>If the issue persists, capture a screenshot or screen recording and send it to support.</li>
+      </ul>
+
+      <h3>Touch Input Not Registering</h3>
+      <ul>
+        <li>Close other heavy apps running in the background.</li>
+        <li>Disable battery saver modes that may restrict performance.</li>
+        <li>Try playing in a cooler environment if your device is overheating.</li>
+      </ul>
+
+      <h3>Performance Issues (Lag / Stutter)</h3>
+      <ul>
+        <li>Close background apps.</li>
+        <li>Ensure you have enough free storage space on your device.</li>
+        <li>Disable battery saver modes that may throttle GPU/CPU.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <a class="toplink" href="#top">Back to top ↑</a>
+      <h2>Contact Support</h2>
+      <p>We're here to help you with any issues related to Lava Lift: Logic Rescue.</p>
+
+      <h3>Email Support</h3>
+      <p>
+        If you didn't find what you need in the FAQ or troubleshooting section, please reach out via email.
+        <br/><br/>
+        <b>Support Email:</b> <a class="email" href="mailto:languor_aircrew_9l@icloud.com">languor_aircrew_9l@icloud.com</a>
+      </p>
+
+      <p>When you contact us, please include:</p>
+      <ul>
+        <li>Your device model and OS version.</li>
+        <li>Lava Lift app version (from the app settings/about screen).</li>
+        <li>A short description of the issue and steps to reproduce it.</li>
+        <li>Screenshots or screen recordings, if possible.</li>
+      </ul>
+
+      <h3>Bug Report Template</h3>
+      <pre>App: Lava Lift: Logic Rescue
+Platform: iOS / Android
+Device:
+OS Version:
+App Version:
+
+Issue Summary:
+(Short description)
+
+Steps to Reproduce:
+1)
+2)
+3)
+
+Expected Result:
+(What you thought should happen)
+
+Actual Result:
+(What actually happened)
+
+Additional Notes:
+(Any extra info, screenshots, or recordings)
+      </pre>
+    </section>
+
+    <section id="privacy">
+      <a class="toplink" href="#top">Back to top ↑</a>
+      <h2>Privacy & Data</h2>
+      <p>How Lava Lift: Logic Rescue handles your data.</p>
+
+      <h3>Data We Access</h3>
+      <p>
+        Lava Lift primarily stores local game progress, settings, and level configuration needed to provide core gameplay.
+        Exact data stored may vary depending on version and platform.
+      </p>
+
+      <h3>Device Permissions</h3>
+      <p>
+        Depending on your platform and usage, the game may request permissions such as network access (for updates, analytics, ads, or cloud sync).
+      </p>
+
+      <h3>Third‑Party Services</h3>
+      <p>
+        Some versions may use third‑party services (analytics, crash reporting, ads). These are used only to improve stability and user experience.
+      </p>
+
+      <h3>Your Control</h3>
+      <ul>
+        <li>You can clear local app data from your device settings.</li>
+        <li>You may revoke permissions such as storage or network access from OS settings (some features may stop working).</li>
+        <li>You can contact support at any time for clarification about stored data.</li>
+      </ul>
+
+      <p class="small">
+        This page is a general support and information page for Lava Lift: Logic Rescue and may be updated as the app evolves. Please check back for the latest information.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © 2025 Lava Lift: Logic Rescue. All rights reserved.
+      <a class="toplink" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
